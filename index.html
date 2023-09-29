@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Me - Rachael Ireland</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+
+    <style>
+        #navbar {
+            background-color: #2c3e50;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #navbar a {
+            color: #ffffff;
+            padding: 14px 16px;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 5px;
+        }
+
+        #navbar a:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 4px 0;
+        }
+
+        @media (max-width: 768px) {
+            #navbar {
+                background-color: #333;
+                padding: 15px;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            #navbar a {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            #navbar.toggled a {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    </style>
+    <!-- <style>
+        #navbar {
+            background-color: #333;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #navbar a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 5px;
+            /* Optional: Adds a little space between links */
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        /* ... rest of your styles ... */
+    </style> -->
+    <style>
+        #demo-banner {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1001;
+            /* Ensure it stays on top */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+        }
+
+        .demo-text {
+            font-size: 10vw;
+            /* Adjust size here */
+            color: black;
+            /* Set text color to black */
+            transform: rotate(20deg);
+            white-space: nowrap;
+        }
+
+        /* Your other styles here */
+    </style>
+</head>
+
+<body>
+    <!-- <div id="demo-banner">
+        <span class="demo-text">Get A New Photo!</span>
+    </div> -->
+
+    <div id="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <a href="#about-me">Home</a>
+        <a href="#services-offered">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#narrative">About Me</a>
+        <a href="#contact">Contact</a>
+        <a href="#social-media">Social Media</a>
+    </div>
+
+    <div class="container">
+        <!-- Your existing content goes here -->
+        <section id="about-me">
+            <div class="narrative-block reverse">
+                <div class="text-block">
+                    <header>
+                        <h1>Meet Rachael Ireland, Your Dedicated Registered Massage Therapist</h1>
+                        <h2>Bridging the gap between athleticism, wellness, and healing</h2>
+                    </header>
+
+                </div>
+                <div class="image-container left-image">
+                    <img src="https://assets-jane-cac1-19.janeapp.net/pub/W1siZiIsImRyYWdvbmZseS8yMzUyMy91c2VyL3Bob3RvLzIwMjMtMDgtMDMvMTkxMTI0LzEwN2JiZmRhLTEzZWYtNGI5MS1hNTVhLTJkMjhjYWI2ODRhNS9QaG90b2dyYXBoX0ZpbmFsLmpwZyJdLFsicCIsInRodW1iIiwiMjAweDI2MCMiXV0?sha=f7e0b14a4c36aaea&amp;for=definitivechiropractic.janeapp.com"
+                        alt="Rachael Ireland" />
+                </div>
+            </div>
+        </section>
+        <section id="credentials">
+            <h3>Education and Credentials:</h3>
+            <div class="credentials-grid">
+                <div class="credentials-block">
+                    <h4 data-aos="fade-up" data-aos-delay="300">Registered Massage Therapist (License #XXXXX)</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        Acquired a professional license showcasing a high standard of massage therapy practice,
+                        adherence to ethical standards, and a commitment to continuous professional development. Engages
+                        in regular training and professional development workshops to stay updated with the latest
+                        advancements in the field.
+                    </p>
+                </div>
+                <div class="credentials-block">
+                    <h4 data-aos="fade-up" data-aos-delay="300">Advanced Diploma in Massage Therapy</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">(Sir Sandford Fleming College, 2023)</p>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        Completed an intensive program with a focus on practical skills and theoretical knowledge
+                        essential for a career in massage therapy. Engaged in over 500 hours of hands-on clinical
+                        practice, mastering various massage techniques and developing a holistic approach to patient
+                        care and recovery.
+                    </p>
+                </div>
+
+                <div class="credentials-block">
+                    <h4 data-aos="fade-up" data-aos-delay="300">Bachelor of Science in Biological Science</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">(Ontario Tech University, 2017)</p>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        Gained a strong foundation in the intricacies of human anatomy and physiology which fostered a
+                        profound interest in healthcare and wellness. Participated in various health-related workshops
+                        and seminars, enhancing understanding and sparking a passion for a hands-on approach to
+                        promoting health and wellbeing.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services-offered">
+            <h3>Services Offered:</h3>
+            <div class="services-grid">
+                <div class="service-block"
+                    onclick="location.href='https://definitivechiropractic.janeapp.com/#/staff_member/8/treatment/29';">
+                    <h4 data-aos="fade-up" data-aos-delay="300">Massage Therapy Initial Assessment</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">(60 minutes - $95.00)</p>
+                    <p data-aos="fade-up" data-aos-delay="300">Begin your journey towards relief and relaxation with a
+                        personalized initial assessment. This
+                        60-minute
+                        session includes a 15-minute assessment to understand your unique needs followed by a 45-minute
+                        therapeutic massage. Together, we'll craft a treatment plan tailored to your wellness goals.</p>
+                </div>
+                <div class="service-block"
+                    onclick="location.href='https://definitivechiropractic.janeapp.com/#/staff_member/8/treatment/30';">
+                    <h4 data-aos="fade-up" data-aos-delay="300">60-minute Therapeutic Massage</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">(60 minutes - $95.00)</p>
+                    <p data-aos="fade-up" data-aos-delay="300">Opt for a full hour of therapeutic massage to delve into
+                        and address your problem areas. This
+                        session
+                        allows ample time to alleviate tension and work through painful spots, promoting overall
+                        relaxation
+                        and
+                        well-being. It's a perfect blend of thorough treatment and time efficiency to fit into your
+                        bustling
+                        schedule.</p>
+                </div>
+                <div class="service-block"
+                    onclick="location.href='https://definitivechiropractic.janeapp.com/#/staff_member/8/treatment/31';">
+                    <h4 data-aos="fade-up" data-aos-delay="300">45-minute Focused Therapy</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">(45 minutes - $75.00)</p>
+                    <p data-aos="fade-up" data-aos-delay="300">This session is designed for targeted relief on a
+                        specific area like lower back, neck and
+                        shoulders,
+                        or
+                        hips. A 45-minute session provides an intensive treatment approach to tackle discomfort and
+                        promote
+                        healing in a focused area, paving the way for improved mobility and relief.</p>
+                </div>
+                <div class="service-block "
+                    onclick="location.href='https://definitivechiropractic.janeapp.com/#/staff_member/8/treatment/32';">
+                    <h4 data-aos="fade-up" data-aos-delay="300">30-minute Targeted Massage</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">(30 minutes - $60.00)</p>
+                    <p data-aos="fade-up" data-aos-delay="300">When time is of the essence or you need concentrated care
+                        on a particular area such as shoulders,
+                        lower
+                        back, or arms, a 30-minute targeted massage is your go-to choice. Experience targeted relief and
+                        rejuvenation, perfect for a mid-day break or to address specific muscular concerns.</p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h3>Testimonials:</h3>
+            <div class="testimonials-grid">
+                <p data-aos="fade-up" data-aos-delay="300">
+
+                    Please note, the<b> regulations </b> surrounding testimonials from existing or former clients,
+                    friends, or
+                    relatives
+                    <b>require</b> Registered Massage Therapists (RMTs) <b>to disable any </b> media functions that
+                    permit
+                    <b> testimonials</b>.
+                    RMTs are also required to take all reasonable steps to remove such content or disassociate it from
+                    pages
+                    related to their practice.<b> The following testimonials are fictional and are provided for testing
+                        purposes only, they do not represent real feedback from individuals</b>
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-block">
+                    <h4 data-aos="fade-up" data-aos-delay="300">Unreal Testimonial by Imaginary Person A:</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">"My experience with this non-existent service was
+                        absolutely otherworldly. From the made-up moment I walked in, the air was filled with
+                        fantastical ambiance. The fake therapist had an incredible ability to ease my imaginary aches
+                        and pains. I left the unreal session feeling like a mythical creature. I would not hesitate to
+                        not recommend this fictional service to anyone!"</p>
+                </div>
+                <div class="testimonial-block">
+                    <h4 data-aos="fade-up" data-aos-delay="300">Fake Praise by Fictitious Character B:</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">"This fake massage therapy center is truly non-existent!
+                        The fabricated attention to detail and whimsical atmosphere took my nonexistent breath away. The
+                        bogus treatment I received was nothing short of a fairy tale. It's a pity that this place only
+                        exists in a figment of imagination!"</p>
+                </div>
+                <div class="testimonial-block">
+                    <h4 data-aos="fade-up" data-aos-delay="300">Nonexistent Endorsement by Illusory Entity C:</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">"A genuine miracle of make-believe! This fictional
+                        therapist's hands worked imaginary wonders on my made-up sore muscles. The fairy-tale-like
+                        environment and the fabricated techniques used were out of a dream. I am looking forward to not
+                        booking my next pretend session!"</p>
+                </div>
+                <div class="testimonial-block">
+                    <h4 data-aos="fade-up" data-aos-delay="300">Imaginary Acclaim by Phantom Individual D:</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">"The fake therapist at this nonexistent wellness center
+                        has a remarkable knack for identifying and alleviating mythical problem areas. Every part of the
+                        made-up session was meticulously choreographed in the land of make-believe. An illusory
+                        experience like no other!"</p>
+                </div>
+            </div>
+        </section>
+        <section id="narrative">
+            <h3>About Me</h3>
+            <!-- Narrative 1 -->
+            <div class="narrative-block ">
+                <div class="text-block" data-aos="fade-right" data-aos-delay="300">
+                    <h2>Early Engagements in Physical Activities</h2>
+                    <p>
+                        Since my early years, I have always been highly active and engaged in various physical
+                        activities.
+                        Archery has been a passion of mine which not only honed my focus and precision but also
+                        instilled in
+                        me a sense of discipline and patience. The tranquility of nature always intrigued me, and
+                        camping
+                        allowed me to connect with the natural world, enriching my appreciation for life outside the
+                        bustling
+                        urban life. My involvement in cheerleading and gymnastics during my growing up years nurtured my
+                        team
+                        spirit, physical agility, and resilience.
+                    </p>
+                </div>
+                <div class="image-container" data-aos="fade-left" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1840&q=80"
+                        alt="Early Engagements in Physical Activities">
+                </div>
+
+            </div>
+            <!-- Narrative 2 -->
+            <div class="narrative-block reverse">
+                <div class="text-block" data-aos="fade-left" data-aos-delay="300">
+                    <h2>Undergraduate Studies in Biological Science</h2>
+                    <p>
+                        In 2017, I embarked on an educational journey in health care at Ontario Tech University. There,
+                        I
+                        pursued a Bachelor of Science in Biological Science which served as a foundation stone to my
+                        understanding of the intricacies of the human body. The knowledge and insight I acquired during
+                        this
+                        period were profound and ignited my desire to delve deeper into the health and wellness domain.
+                    </p>
+                </div>
+                <div class="image-container  left-image" data-aos="fade-right" data-aos-delay="300"><img
+                        src="https://images.unsplash.com/photo-1453847668862-487637052f8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80"
+                        alt="Undergraduate Studies in Biological Science"></div>
+
+            </div>
+            <!-- Narrative 3 -->
+            <div class="narrative-block">
+                <div class="text-block">
+                    <h2 data-aos="fade-up" data-aos-delay="300">Transition to Massage Therapy Education</h2>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        Upon completion of my undergraduate studies, I was drawn towards a profession where I could
+                        apply my
+                        understanding of biological sciences to help individuals in a direct and impactful manner. The
+                        field of
+                        massage therapy beckoned, promising a blend of science, wellness, and the potential to
+                        facilitate
+                        healing in others. Hence, I enrolled at Sir Sandford Fleming College to further my education and
+                        skills
+                        in this sphere.
+                    </p>
+                </div>
+                <div class="image-container" data-aos="fade-left" data-aos-delay="300"><img
+                        src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+                        alt="Transition to Massage Therapy Education"></div>
+
+            </div>
+            <!-- Narrative 4 -->
+            <div class="narrative-block reverse">
+                <div class="text-block">
+                    <h2 data-aos="fade-up" data-aos-delay="300">Graduation and Advancement in Massage Therapy</h2>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        Spring of 2023 marked a significant milestone in my life as I graduated with an Advanced Diploma
+                        in
+                        Massage Therapy. This educational venture was more than just academic growth; it was a pathway
+                        towards
+                        my aspiration of becoming a Registered Massage Therapist (RMT).
+                    </p>
+                </div>
+                <div class="image-container  left-image" data-aos="fade-right" data-aos-delay="300"><img
+                        src="https://images.unsplash.com/photo-1462536943532-57a629f6cc60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80"
+                        alt="Graduation and Advancement in Massage Therapy"></div>
+
+            </div>
+            <!-- Narrative 5 -->
+            <div class="narrative-block">
+                <div class="text-block">
+                    <h2 data-aos="fade-up" data-aos-delay="300">Overcoming Physical Adversities</h2>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        My athletic background was not without challenges. Over the years, I faced numerous injuries
+                        which,
+                        although momentarily setback my physical pursuits, cultivated in me a deep-seated interest in
+                        understanding the healing process. The adversities I faced were not barriers but stepping
+                        stones,
+                        leading me towards a quest to learn about injury treatment and prevention. My personal
+                        experiences with
+                        injuries inspired a compassion for others facing similar hurdles, and a desire to provide
+                        alleviation
+                        blossomed within me.
+                    </p>
+                </div>
+                <div class="image-container" data-aos="fade-left" data-aos-delay="300"><img
+                        src="https://images.unsplash.com/photo-1516398810565-0cb4310bb8ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80"
+                        alt="Overcoming Physical Adversities"></div>
+
+            </div>
+            <!-- Narrative 6 -->
+            <div class="narrative-block reverse">
+                <div class="text-block">
+                    <h2 data-aos="fade-up" data-aos-delay="300">Holistic Approach Towards Healing and Wellness</h2>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        With a firm resolve to aid individuals on their healing journey, my aim as an RMT is to not only
+                        provide
+                        therapeutic relief to those battling physical discomforts and injuries but also to foster an
+                        environment
+                        of education and awareness. I am committed to guiding individuals on the importance of regular
+                        exercise,
+                        home care, and a holistic approach to wellness, ensuring a sustainable recovery and a robust
+                        understanding
+                        of injury prevention.
+                    </p>
+                </div>
+                <div class="image-container  left-image" data-aos="fade-right" data-aos-delay="300"><img
+                        src="https://images.unsplash.com/photo-1477332552946-cfb384aeaf1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt="Holistic Approach Towards Healing and Wellness"></div>
+
+            </div>
+            <!-- Narrative 7 -->
+            <div class="narrative-block">
+                <div class="text-block">
+                    <h2 data-aos="fade-up" data-aos-delay="300">Aspirations as a Registered Massage Therapist</h2>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        The amalgamation of my athletic background, academic achievements, and personal adversities has
+                        shaped my
+                        perspective and honed my skills, preparing me to embark on a fulfilling career as a Registered
+                        Massage
+                        Therapist. Through my practice, I aspire to contribute positively to individuals’ lives,
+                        empowering them
+                        to regain functionality, embrace wellness, and enjoy the beauty of an active and healthy
+                        lifestyle.
+                    </p>
+                </div>
+                <div class="image-container" data-aos="fade-left" data-aos-delay="300"><img
+                        src="https://images.unsplash.com/photo-1471940393269-df205607fb2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt="Aspirations as a Registered Massage Therapist"></div>
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <section id="contact">
+
+            <div class="contact-block ">
+                <div class="contact-form">
+                    <h3>Contact:</h3>
+                    <form action="https://formspree.io/your-formspree-endpoint" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="_replyto" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <input type="submit" value="Send">
+                    </form>
+                    <ul>
+                        <li>Phone: (XXX) XXX-XXXX</li>
+
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="location-container">
+                    <!-- Embed Google Maps -->
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2855.686861533925!2d-78.3256161!3d44.2958283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4056bf8a1c2fba25%3A0x987c6021460f2973!2sDefinitive%20Chiropractic!5e0!3m2!1sen!2sca!4v1696004505875!5m2!1sen!2sca"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social-media">
+            <h3>Follow Me:</h3>
+            <div class="social-links">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link facebook-link">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link instagram-link">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link linkedin-link">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+
+    </div>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById('navbar');
+            if (navbar.classList.contains('toggled')) {
+                navbar.classList.remove('toggled');
+            } else {
+                navbar.classList.add('toggled');
+            }
+        }
+    </script>
+    <script>
+        document.querySelectorAll('#navbar a').forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();  // Prevents the default anchor link behavior.
+
+                var targetId = event.currentTarget.getAttribute('href').substring(1);  // Gets the target section id from the href attribute of the clicked link.
+                var targetElement = document.getElementById(targetId);  // Gets the target element based on the id.
+                var navbarHeight = document.getElementById('navbar').offsetHeight;  // Gets the height of the navbar.
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - navbarHeight,  // Calculates the position to scroll to, adjusted for the navbar height.
+                    behavior: 'smooth'  // Makes the scroll smooth.
+                });
+            });
+        });
+    </script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var navbarHeight = document.getElementById('navbar').offsetHeight;
+            document.body.style.paddingTop = navbarHeight + 'px';
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!--
+have section about what message therepay is any why they'ed want it
+
+go into deteial about techinques 
+
+provide quick access to serveces
+
+what does rachael do that... what's her hook
+
+
+  -->
